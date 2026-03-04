@@ -20,15 +20,39 @@ public class Pilha<T> {
             return false;
     }
 
-    //isEmpty topo==-1
+    public boolean isEmpty(){
+       /*  if (this.topo== -1)
+            return true;
+        else 
+            return false;*/
+        return this.topo == -1;
+    }
 
-    //pop 
-    // se nao estiver vazio, remover
-    // T elementoRetorno = elementos[topo];
-    // topo --
-    // return elementoRetorno
+     public T pop(){
+        if(!isEmpty()){
+            T removido = this.elementos[this.topo];
+            this.topo--;
+            return removido;
+        }
+        return null;
+     }
 
+     public T peek(){
+        if(!isEmpty())
+            return this.elementos[this.topo];
+        else
+            return null;
+     }
 
+     @Override
+     public String toString(){
+        StringBuilder pilha = new StringBuilder("Topo\n");
+        for(int i = this.topo; i>=0; i--)
+            pilha.append(this.elementos[i]+"\n");
+
+        pilha.append("__________\n");
+        return pilha.toString();
+     }
 
 
 }
