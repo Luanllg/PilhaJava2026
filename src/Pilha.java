@@ -21,10 +21,10 @@ public class Pilha<T> {
     }
 
     public boolean isEmpty(){
-       /*  if (this.topo== -1)
+         if (this.topo== -1)
             return true;
         else 
-            return false;*/
+            return false;
         return this.topo == -1;
     }
 
